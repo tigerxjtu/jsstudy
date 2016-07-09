@@ -1,0 +1,44 @@
+{
+  "name": "jsstudy",
+  "version": "1.0.0",
+  "description": "for study javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "watch": "babel src -d target --watch",
+    "compile": "npm run clean && babel src -d target",
+    "clean": "rm -rf target",
+    "start": "set NODE_ENV=dev&& set DEBUG=my:*,project-core:*&& cd target&& node index.js",
+    "fe:compile": "cd frontend&& webpack --progress --colors",
+    "fe:watch": "cd frontend&& webpack --progress --colors --watch",
+    "fe:dev": "cd frontend&& webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tigerxjtu/jsstudy.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "tigerxjtu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tigerxjtu/jsstudy/issues"
+  },
+  "homepage": "https://github.com/tigerxjtu/jsstudy#readme",
+
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "nodemon": "^1.9.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
