@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-        'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
+        'webpack-dev-server/client?http://0.0.0.0:3333', // WebpackDevServer host and port
         'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
         "./entry.js"
     ],
@@ -47,16 +47,16 @@ module.exports = {
 
     devServer: {
         contentBase: __dirname,
-        port: 3000,
+        port: 3333,
         inline: true,
         hot: true,
         historyApiFallback: false,
         stats: {
             colors: true
         },
-        proxy:{
+        /*proxy:{
             '*': 'http://127.0.0.1:3001'
-        }
+        }*/
     },
     babel: {
         presets: ['react', 'es2015']

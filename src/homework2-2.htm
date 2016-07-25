@@ -1,0 +1,13 @@
+<html>
+<body>
+ <div id = 'div1'>I am here </div>
+  <script>
+    /*var getId = document.getElementById;
+	alert(getId.call(document,'div1'));*/
+	var getId=function(id){
+		return document.getElementById(id);
+	}
+	alert(getId('div1'));
+  </script>
+</body>
+</html>
