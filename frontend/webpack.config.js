@@ -5,7 +5,8 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://0.0.0.0:3333', // WebpackDevServer host and port
         'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-        "./entry.js"
+        "./entry.js",
+        "./homework3-1.js"
     ],
     output: {
         path: path.resolve(__dirname, 'build'),
